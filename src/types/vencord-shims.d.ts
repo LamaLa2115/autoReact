@@ -54,6 +54,16 @@ declare module "@webpack/common" {
         setExpressionPickerView?: (activeView: string) => void;
     };
 
+    export const Toasts: {
+        Type: {
+            MESSAGE: string;
+            SUCCESS: string;
+            FAILURE: string;
+        };
+    };
+
+    export function showToast(message: string, type?: string, options?: { duration?: number }): void;
+
     export const Button: any;
     export const Forms: any;
     export const TextArea: any;
